@@ -1,7 +1,6 @@
 from math import floor, ceil
 from functools import reduce
 import re
-import itertools
 
 def explode(pair):
     pair = str(pair)
@@ -97,7 +96,6 @@ solution = reduce(lambda l, r: reduce_pair([l, r]), snailfish_numbers)
 def magnitude(pair):
     l, r = pair
 
-
     if type(l) != int:
         l = magnitude(l)
 
@@ -113,7 +111,6 @@ print(magnitude(solution))
 #==================#
 
 max_magnitude = 0
-i = 0
 
 for x, nums1 in enumerate(snailfish_numbers):
     for y, nums2 in enumerate(snailfish_numbers):
